@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background: var(--Cream);
+}
+
 :root{
 
     --font-montserrat: 'Montserrat', sans-serif;
@@ -30,10 +34,14 @@
     border-radius: 15px;
 }
 
-img {
+.art {
     width: 100%;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+}
+
+.art-desktop{
+    display: none;
 }
 
 p {
@@ -87,4 +95,22 @@ h1 {
 
 .card a:hover{
     background: var(--Very-dark-blue);
+}
+
+/*MEDIA QUERY*/
+
+@media screen and (min-width:376px) {
+    .container{
+        display: flex;
+    }
+
+    .art {
+        visibility: hidden;
+        display: none;
+    }
+
+    .art-desktop {
+        display: inline;
+        width: 100%;
+    }
 }
