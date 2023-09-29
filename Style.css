@@ -8,6 +8,11 @@
 
 body {
     background: var(--Cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 :root{
@@ -40,14 +45,11 @@ body {
     border-top-left-radius: 15px;
 }
 
-.art-desktop{
-    display: none;
-}
-
 p {
     font-family: var(--font-montserrat);
+    font-weight: 500;
     font-size: 14px;
-    color: var(--Dark-grayish-blue);
+    color: var(--Dark-cyan);
 }
 
 h1 {
@@ -99,18 +101,35 @@ h1 {
 
 /*MEDIA QUERY*/
 
-@media screen and (min-width:376px) {
+@media screen and (min-width:600px) {
     .container{
         display: flex;
+        width: 700px;
+        height: 525px;
+     
     }
 
     .art {
-        visibility: hidden;
-        display: none;
+        width: 350px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
     }
 
-    .art-desktop {
-        display: inline;
-        width: 100%;
+    .card {
+        padding: 2em;
+        justify-content: space-around;
+    }
+
+    .card-info h1 {
+        font-size: 2.5em;
+        line-height: 1em;
+    }
+
+    .card-info p {
+        font-size: 15px;
+    }
+
+    .card-money {
+
     }
 }
